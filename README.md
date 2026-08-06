@@ -119,15 +119,7 @@ where:
 The expected log hospital charge for patient $i$ is modeled as:
 
 $$
-\mu_i =
-\beta_0
-+ \beta_1(\text{age\_group}_i)
-+ \beta_2(\text{admission\_type}_i)
-+ \beta_3(\text{severity\_code}_i)
-+ \beta_4(\text{med\_surg}_i)
-+ \beta_5(\text{ed\_indicator}_i)
-+ \beta_6(\text{length\_of\_stay}_i)
-+ u_{j[i]}
+\mu_i = \beta_0 + \beta_1(\text{age\_group}_i) + \beta_2(\text{admission\_type}_i) + \beta_3(\text{severity\_code}_i) + \beta_4(\text{med\_surg}_i) + \beta_5(\text{ed\_indicator}_i) + \beta_6(\text{length\_of\_stay}_i) + u_{j[i]}
 $$
 
 where:
@@ -140,7 +132,6 @@ where:
 - $\text{ed\_indicator}_i$ indicates whether the patient was admitted through the emergency department.
 - $\text{length\_of\_stay}_i$ is the patient's hospital stay (in days).
 - $u_{j[i]}$ is the facility-specific random intercept for the hospital where patient $i$ received treatment.
-
 ### Facility-Level Random Intercept
 
 To account for differences between hospitals that are not explained by the observed patient characteristics, each facility is assigned its own random intercept:
