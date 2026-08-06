@@ -122,19 +122,19 @@ where:
 The expected log hospital charge for patient $i$ is modeled as:
 
 $$
-\mu_i = \beta_0 + \beta_1(\text{age\_group}_i) + \beta_2(\text{admission\_type}_i) + \beta_3(\text{severity\_code}_i) + \beta_4(\text{med\_surg}_i) + \beta_5(\text{ed\_indicator}_i) + \beta_6(\text{length\_of\_stay}_i) + u_{j[i]}
+\mu_i = \beta_0 + \beta_1(\text{ageGroup}_i) + \beta_2(\text{admissionType}_i) + \beta_3(\text{severityCode}_i) + \beta_4(\text{medSurg}_i) + \beta_5(\text{edIndicator}_i) + \beta_6(\text{lengthOfStay}_i) + u_{j[i]}
 $$
 
 where:
 
 - $\beta_0$ is the overall (population-level) intercept.
 - $\beta_1$–$\beta_6$ are regression coefficients that quantify the effect of each predictor on the log of hospital charges.
-- $\text{age\_group}_i$ represents the patient's age category.
-- $\text{admission\_type}_i$ indicates the type of hospital admission.
-- $\text{severity\_code}_i$ represents the patient's illness severity level.
-- $\text{med\_surg}_i$ indicates whether the patient underwent a medical or surgical procedure.
-- $\text{ed\_indicator}_i$ indicates whether the patient was admitted through the emergency department.
-- $\text{length\_of\_stay}_i$ is the patient's hospital stay (in days).
+- $\text{ageGroup}_i$ represents the patient's age category (`age_group` in the dataset).
+- $\text{admissionType}_i$ indicates the type of hospital admission (`admission_type` in the dataset).
+- $\text{severityCode}_i$ represents the patient's illness severity level (`severity_code` in the dataset).
+- $\text{medSurg}_i$ indicates whether the patient underwent a medical or surgical procedure (`med_surg` in the dataset).
+- $\text{edIndicator}_i$ indicates whether the patient was admitted through the emergency department (`ed_indicator` in the dataset).
+- $\text{lengthOfStay}_i$ is the patient's hospital stay in days (`length_of_stay` in the dataset).
 - $u_{j[i]}$ is the facility-specific random intercept for the hospital where patient $i$ received treatment.
 
 ### Facility-Level Random Intercept
