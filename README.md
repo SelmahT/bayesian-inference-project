@@ -4,7 +4,13 @@
 
 ## Team
 
-Harina Chohan · Het Al Khumbarana · Marilyn Maika · Selmah Tzindori · Queen Esther
+| Name | GitHub Username |
+|------|------------------|
+| Harina Chohan | [@HarinaChohan](https://github.com/HarinaChohan) |
+| Hetal Kumbharana | [@HetalK4](https://github.com/HetalK4) |
+| Marilyn Maika | [@MarilynMaika](https://github.com/MarilynMaika) |
+| Selmah Tzindori | [@SelmahT](https://github.com/SelmahT) |
+| Queen Esther | [@QUEEN-KIBEGI](https://github.com/QUEEN-KIBEGI) |
 
 ## Overview
 
@@ -32,8 +38,8 @@ modeling it explicitly?
 ├── docs/                            # Project documentation
 │   ├── Preprocessing report
 │   ├── EDA report
-│   ├── Workflow notes
-│   └── Topic decision record
+│   └── Modelling report
+│  
 │
 └── slides/                          # Final presentation deck and supporting figures
 ```
