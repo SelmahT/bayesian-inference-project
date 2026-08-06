@@ -99,28 +99,26 @@ See `docs/` for the detailed preprocessing and EDA report with full statistics a
 
 The response variable is the natural logarithm of hospital charges:
 
-\[
+$$
 y_i = \log(\text{charges}_i)
-\]
+$$
 
 The transformed response is assumed to follow a normal distribution:
 
-\[
+$$
 y_i \sim \text{Normal}(\mu_i, \sigma)
-\]
+$$
 
 where:
-
-- \(y_i\) is the log-transformed hospital charge for patient \(i\).
-- \(\mu_i\) is the expected (mean) log charge predicted by the model.
-- \(\sigma\) is the residual standard deviation, representing unexplained variability.
-
+- $y_i$ is the log-transformed hospital charge for patient $i$.
+- $\mu_i$ is the expected (mean) log charge predicted by the model.
+- $\sigma$ is the residual standard deviation, representing unexplained variability.
 
 ### Linear Predictor
 
-The expected log hospital charge for patient \(i\) is modeled as:
+The expected log hospital charge for patient $i$ is modeled as:
 
-\[
+$$
 \mu_i =
 \beta_0
 + \beta_1(\text{age\_group}_i)
@@ -130,40 +128,35 @@ The expected log hospital charge for patient \(i\) is modeled as:
 + \beta_5(\text{ed\_indicator}_i)
 + \beta_6(\text{length\_of\_stay}_i)
 + u_{j[i]}
-\]
+$$
 
 where:
-
-- \(\beta_0\) is the overall (population-level) intercept.
-- \(\beta_1\)–\(\beta_6\) are regression coefficients that quantify the effect of each predictor on the log of hospital charges.
-- \(\text{age\_group}_i\) represents the patient's age category.
-- \(\text{admission\_type}_i\) indicates the type of hospital admission.
-- \(\text{severity\_code}_i\) represents the patient's illness severity level.
-- \(\text{med\_surg}_i\) indicates whether the patient underwent a medical or surgical procedure.
-- \(\text{ed\_indicator}_i\) indicates whether the patient was admitted through the emergency department.
-- \(\text{length\_of\_stay}_i\) is the patient's hospital stay (in days).
-- \(u_{j[i]}\) is the facility-specific random intercept for the hospital where patient \(i\) received treatment.
+- $\beta_0$ is the overall (population-level) intercept.
+- $\beta_1$–$\beta_6$ are regression coefficients that quantify the effect of each predictor on the log of hospital charges.
+- $\text{age\_group}_i$ represents the patient's age category.
+- $\text{admission\_type}_i$ indicates the type of hospital admission.
+- $\text{severity\_code}_i$ represents the patient's illness severity level.
+- $\text{med\_surg}_i$ indicates whether the patient underwent a medical or surgical procedure.
+- $\text{ed\_indicator}_i$ indicates whether the patient was admitted through the emergency department.
+- $\text{length\_of\_stay}_i$ is the patient's hospital stay (in days).
+- $u_{j[i]}$ is the facility-specific random intercept for the hospital where patient $i$ received treatment.
 
 ### Facility-Level Random Intercept
 
 To account for differences between hospitals that are not explained by the observed patient characteristics, each facility is assigned its own random intercept:
 
-\[
+$$
 u_j \sim \text{Normal}(0,\sigma_{\text{facility}}),
 \qquad j = 1, \ldots, 201
-\]
+$$
 
 where:
-
-- \(u_j\) is the random effect for facility \(j\).
+- $u_j$ is the random effect for facility $j$.
 - The random effects are assumed to have a mean of **0**, implying that facilities are centered around the overall average hospital charge.
-- \(\sigma_{\text{facility}}\) is the standard deviation of the facility-level random effects and measures the amount of variation in charges across hospitals after accounting for patient-level predictors.
+- $\sigma_{\text{facility}}$ is the standard deviation of the facility-level random effects and measures the amount of variation in charges across hospitals after accounting for patient-level predictors.
 - The model includes **201 facility-level random intercepts**, one for each hospital in the dataset, allowing each facility to have its own baseline level of hospital charges while sharing information through the hierarchical Bayesian framework.
 
-An **identity link** is used throughout — predictors act directly on the expected
-log-charge.
-
-### Priors
+An **identity link** is used throughout — predictors act directly on the expected log-charge.### Priors
 
 Weakly informative, data-scaled priors (Bambi's automatic defaults):
 
