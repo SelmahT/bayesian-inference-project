@@ -128,7 +128,7 @@ $$
 where:
 
 - $\beta_0$ is the overall (population-level) intercept.
-- $\beta_1$–$\beta_6$ are regression coefficients that quantify the effect of each predictor on the log of hospital charges.
+- $\beta_1$ – $\beta_6$ are regression coefficients that quantify the effect of each predictor on the log of hospital charges.
 - $\text{ageGroup}_i$ represents the patient's age category (`age_group` in the dataset).
 - $\text{admissionType}_i$ indicates the type of hospital admission (`admission_type` in the dataset).
 - $\text{severityCode}_i$ represents the patient's illness severity level (`severity_code` in the dataset).
