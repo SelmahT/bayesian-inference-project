@@ -237,7 +237,6 @@ distributing variance across facilities rather than treating it all as noise.
 - [x] Model fitted, converged (acceptable), and compared against a baseline
 - [x] Posterior predictive checks complete
 - [x] Slide deck prepared (`slides/`)
-- [ ] Final write-up / report
 
 ## Reproducing This Project
 
